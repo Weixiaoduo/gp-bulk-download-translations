@@ -1,0 +1,145 @@
+/* GP Bulk Download Admin Styles */
+
+.gpbd-admin-container {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.gpbd-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.gpbd-column h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #2271b1;
+    padding-bottom: 10px;
+}
+
+/* Project List */
+.gpbd-search-box {
+    margin-bottom: 15px;
+}
+
+.gpbd-search-box input {
+    width: 100%;
+    padding: 8px;
+}
+
+.gpbd-actions {
+    margin-bottom: 15px;
+}
+
+.gpbd-project-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.gpbd-project-item {
+    padding: 5px 0;
+}
+
+.gpbd-project-item label {
+    display: block;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.gpbd-project-item label:hover {
+    background: #e8e8e8;
+}
+
+.gpbd-project-item input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.gpbd-project-child {
+    margin-left: 25px;
+}
+
+/* Link Preview */
+.gpbd-link-preview {
+    margin: 15px 0;
+}
+
+.gpbd-link-preview textarea {
+    width: 100%;
+    font-family: monospace;
+    padding: 10px;
+    background: #f0f0f1;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.gpbd-file-preview {
+    padding: 10px;
+    background: #f0f0f1;
+    border-left: 3px solid #2271b1;
+    margin-bottom: 15px;
+}
+
+.gpbd-file-preview code {
+    color: #2271b1;
+    font-weight: bold;
+}
+
+.gpbd-button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.gpbd-button-group button {
+    flex: 1;
+}
+
+/* Tabs */
+.gpbd-tab-content {
+    margin-top: 20px;
+}
+
+/* Settings */
+.form-table code {
+    background: #f0f0f1;
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .gpbd-two-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .gpbd-button-group {
+        flex-direction: column;
+    }
+}
+
+/* Loading */
+.gpbd-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.gpbd-loading::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #2271b1;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
